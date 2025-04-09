@@ -63,6 +63,7 @@ public class IncomeController {
 
             // Balance aktualisieren
             balanceController.processIncomeTransaction(incomeInput);
+
             // Neue Transaktion in die DB einfügen
             Transaction transaction = new Transaction(0, "", sourceInput, incomeInput, date, "Income", "");
             TransactionDAO.insertTransaction(transaction);

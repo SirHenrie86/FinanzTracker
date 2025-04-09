@@ -15,7 +15,7 @@ public class SidebarView extends JPanel {
         sidebar = new JPanel(new GridBagLayout());
         sidebar.setPreferredSize(new Dimension(150, 600));
         sidebar.setBorder(BorderFactory.createLineBorder(Color.black));
-        sidebar.setBackground(new Color(51, 178, 231));
+        sidebar.setBackground(new Color(67, 194, 246));
         GridBagConstraints gbcS = new GridBagConstraints();
         gbcS.gridx = 0;
         gbcS.fill = GridBagConstraints.HORIZONTAL;
@@ -25,7 +25,7 @@ public class SidebarView extends JPanel {
         gbcS.gridy = 0;
         gbcS.weighty = 1.0;
         sidePlatzhalter1 = new JPanel();
-        sidePlatzhalter1.setBackground(new Color(51, 178, 231));
+        sidePlatzhalter1.setBackground(new Color(67, 194, 246));
         sidebar.add(sidePlatzhalter1, gbcS);
 
         dashboardButton = new JButton("Dashboard"); // -> controller
@@ -33,7 +33,7 @@ public class SidebarView extends JPanel {
         gbcS.weighty = 0;  // Wert zurücksetzen
         sidebar.add(dashboardButton, gbcS);
 
-        addCashButton = new JButton("Add Cash"); // --> controller
+        addCashButton = new JButton("Income"); // --> controller
         gbcS.gridy = 2;
         sidebar.add(addCashButton, gbcS);
 
@@ -45,10 +45,10 @@ public class SidebarView extends JPanel {
         gbcS.gridy = 4;
         gbcS.weighty = 1.0;
         sidePlatzhalter2 = new JPanel();
-        sidePlatzhalter2.setBackground(new Color(51, 178, 231));
+        sidePlatzhalter2.setBackground(new Color(67, 194, 246));
         sidebar.add(sidePlatzhalter2, gbcS);
 
-        printButton = new JButton("Print Sheet"); // --> controller
+        printButton = new JButton("Export Table"); // --> controller
         gbcS.gridy = 5;
         gbcS.weighty = 0; // Wert zurücksetzen
         gbcS.anchor = GridBagConstraints.SOUTH;

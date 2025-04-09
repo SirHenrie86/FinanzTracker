@@ -16,7 +16,7 @@ public class ExpanseView extends JPanel {
 
         JPanel expanseArea = new JPanel(new GridBagLayout());
         expanseArea.setBackground(new Color(211, 211, 211));
-        JLabel expanseHeadline = new JLabel("Add Expense", SwingConstants.CENTER);
+        JLabel expanseHeadline = new JLabel("   " + "Expense", SwingConstants.CENTER);
         expanseHeadline.setFont(new Font("Arial", Font.BOLD, 18));
         expanseArea.add(expanseHeadline);
 

@@ -70,6 +70,7 @@ public class ExpanseController {
 
             balanceController.processExpanseTransaction(expanseInput, categoryInput);
 
+
             Transaction transaction = new Transaction(0, purposeInput, "", expanseInput, date, "Expense", categoryInput);
 
             transactionDAO.insertTransaction(transaction);

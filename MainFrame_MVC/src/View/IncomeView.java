@@ -21,7 +21,7 @@ public class IncomeView extends JPanel { // Panel für Cardlayout
         GridBagConstraints gbc = new GridBagConstraints();
         gbc.insets = new Insets(5, 5, 5, 5);
         gbc.fill = GridBagConstraints.HORIZONTAL;
-        incomeTitleLabel = new JLabel("Add Cash");
+        incomeTitleLabel = new JLabel("Income");
         incomeTitleLabel.setFont(new Font("Arial", Font.BOLD, 14));
 
         gbc.gridx = 0;

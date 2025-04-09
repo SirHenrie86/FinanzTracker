@@ -120,16 +120,16 @@ public class BalanceView extends JPanel {
     public void lastExpanseCategoriesUpdate(String category, double sum) {
         switch (category) {
             case "Shopping":
-                lastExpanse1Label.setText(String.format("Euro: " + sum)); // String.format() evtl.
+                lastExpanse1Label.setText(String.format("Euro: " + "%.2f", sum)); // String.format() evtl.
                 break;
             case "Food & Drinks":
-                lastExpanse2Label.setText(String.format("Euro: " + sum));
+                lastExpanse2Label.setText(String.format("Euro: " + "%.2f", sum));
                 break;
             case "Bills":
-                lastExpanse3Label.setText(String.format("Euro: " + sum));
+                lastExpanse3Label.setText(String.format("Euro: " + "%.2f",sum));
                 break;
             case "Others":
-                lastExpanse4Label.setText(String.format("Euro: " + sum));
+                lastExpanse4Label.setText(String.format("Euro: " + "%.2f", sum));
                 break;
         }
     }

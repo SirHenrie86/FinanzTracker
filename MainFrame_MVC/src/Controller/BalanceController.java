@@ -14,6 +14,7 @@ public class BalanceController {
         this.balanceView = balanceView;
     }
 
+
     public void processExpanseTransaction(double amount, String category) {
         switch (category) {
             case "Shopping":

@@ -5,7 +5,6 @@ import View.TableView;
 import Model.Transaction;
 import dao.TransactionDAO;
 import javax.swing.*;
-import java.awt.event.ActionEvent;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Arrays;
@@ -55,13 +54,13 @@ public class TableController {
 
             // Jede Transaktion in die CSV-Datei schreiben
             for (Transaction transaction : transactions) {
-                writer.append(transaction.getId() + " " + (",") + (" "))
-                        .append(transaction.getPurpose() + " " + (",") + (" "))
-                        .append(transaction.getSource() + " " + (",") + (" "))
-                        .append(transaction.getSum() + " " + (",") + (" "))
-                        .append(transaction.getDate().toString() + " " + (",") + (" "))
-                        .append(transaction.getType() + " " + (",") + (" "))
-                        .append(transaction.getCategory() + "\n");
+                writer.append(String.valueOf(transaction.getId())).append(",")
+                        .append(transaction.getPurpose()).append(",")
+                        .append(transaction.getSource()).append(",")
+                        .append(String.valueOf(transaction.getSum())).append(",")
+                        .append(transaction.getDate().toString()).append(",")
+                        .append(transaction.getType()).append(",")
+                        .append(transaction.getCategory()).append("\n");
             }
 
             // Erfolgsmeldung ausgeben

@@ -15,12 +15,14 @@ public class TransactionDAO {
     private static final String USER = "postgres";
     private static final String PASSWORD = "Baum123"; // ist geheim!
 
+    // SELECT
+
     public static List<Transaction> getAllTransactions() {
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) { // Autoclose in den Klammern
             System.out.printf("connection success %n");
 
-            // SELECT
-            String query = "SELECT * from transaction"; // gibt mir alle transactions zurück -> auslesen
+
+            String query = "SELECT * from transaction ORDER BY ID DESC"; // gibt mir alle transactions zurück -> auslesen
             Statement statement = connection.createStatement(); // anfrage stellen -> auslesen
             ResultSet rs = statement.executeQuery(query); // ergebnisse gespeichert die die Datenbank zurück gibt in rs
 
@@ -47,7 +49,7 @@ public class TransactionDAO {
         }
     }
 
-    // INSERT
+    // INSERT ->
     public static void insertTransaction(Transaction transaction) {
         try (Connection connection = DriverManager.getConnection(URL, USER, PASSWORD)) {
             connection.setAutoCommit(false); // Auto-Commit deaktivieren

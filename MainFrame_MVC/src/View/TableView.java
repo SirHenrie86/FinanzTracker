@@ -78,7 +78,4 @@ public class TableView extends JPanel {
     public void deleteRow(int rowIndex) {
         tableModel.removeRow(rowIndex);
     }
-
-
-
 }
